@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GitHub Fish Tank Generator</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>GITHUB FISH TANK</h1>
+      <p class="subtitle">Transform your GitHub languages into a living aquarium</p>
+    </header>
+    
+    <main>
+      <div class="config-panel">
+        <div class="config-grid">
+          <div class="input-group username-group">
+            <label for="username">GitHub Username</label>
+            <div class="username-input-wrapper">
+              <input type="text" id="username" placeholder="e.g., octocat" value="">
+            </div>
+          </div>
+          
+          <div class="input-group">
+            <label for="bgColor">Background Color</label>
+            <div class="color-input-wrapper">
+              <input type="color" id="bgColor" value="#0a192f">
+              <span class="color-value">#0a192f</span>
+            </div>
+          </div>
+          
+          <div class="input-group">
+            <label for="hideLanguages">Hide Languages</label>
+            <input type="text" id="hideLanguages" placeholder="e.g., HTML, CSS">
+          </div>
+        </div>
+        
+        <div class="toggles-section">
+          <h3>Display Options</h3>
+          <div class="toggles-grid">
+            <div class="toggle-group">
+              <label class="toggle">
+                <input type="checkbox" id="showLegend" checked>
+                <span class="toggle-slider"></span>
+              </label>
+              <span class="toggle-label">Legend</span>
+            </div>
+            
+            <div class="toggle-group">
+              <label class="toggle">
+                <input type="checkbox" id="showDecorations" checked>
+                <span class="toggle-slider"></span>
+              </label>
+              <span class="toggle-label">Decorations</span>
+            </div>
+            
+            <div class="toggle-group">
+              <label class="toggle">
+                <input type="checkbox" id="showBubbles" checked>
+                <span class="toggle-slider"></span>
+              </label>
+              <span class="toggle-label">Bubbles</span>
+            </div>
+            
+            <div class="toggle-group">
+              <label class="toggle">
+                <input type="checkbox" id="showRocks" checked>
+                <span class="toggle-slider"></span>
+              </label>
+              <span class="toggle-label">Rocks</span>
+            </div>
+            
+            <div class="toggle-group">
+              <label class="toggle">
+                <input type="checkbox" id="showPlants" checked>
+                <span class="toggle-slider"></span>
+              </label>
+              <span class="toggle-label">Plants</span>
+            </div>
+            
+            <div class="toggle-group">
+              <label class="toggle">
+                <input type="checkbox" id="showCastle" checked>
+                <span class="toggle-slider"></span>
+              </label>
+              <span class="toggle-label">Castle</span>
+            </div>
+            
+            <div class="toggle-group">
+              <label class="toggle">
+                <input type="checkbox" id="showChest" checked>
+                <span class="toggle-slider"></span>
+              </label>
+              <span class="toggle-label">Treasure Chest</span>
+            </div>
+
+            <div class="toggle-group">
+              <label class="toggle">
+                <input type="checkbox" id="showShell" checked>
+                <span class="toggle-slider"></span>
+              </label>
+              <span class="toggle-label">Shell</span>
+            </div>
+          </div>
+        </div>
+        <div class="generate-button-wrapper">
+            <button type="button" id="generateBtn" class="generate-button">GENERATE AQUARIUM</button>
+        </div>
+        <div class="preview-section">
+          <h3>PREVIEW</h3>
+          <div class="preview-container">
+            <img id="preview" src="" alt="">
+            <div id="loading" class="loading">Enter GitHub username and click GENERATE</div>
+          </div>
+        </div>
+        
+        <div class="url-section">
+          <h3>YOUR README URL</h3>
+          <div class="url-container">
+            <input type="text" id="generatedUrl" readonly>
+            <button id="copyBtn" onclick="copyUrl()">COPY</button>
+          </div>
+          <p class="hint">Add this to your GitHub README.md:</p>
+          <code id="markdownCode"></code>
+        </div>
+      </div>
+    </main>
+    
+    <footer>
+      <p>Rate limit: <span id="rateLimit">Checking...</span></p>
+    </footer>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
