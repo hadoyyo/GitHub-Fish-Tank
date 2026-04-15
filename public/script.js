@@ -3,9 +3,11 @@ const API_BASE = window.location.origin;
 const usernameInput = document.getElementById('username');
 const generateBtn = document.getElementById('generateBtn');
 const bgColorInput = document.getElementById('bgColor');
+const frameColorInput = document.getElementById('frameColor');
+const showFrameCheckbox = document.getElementById('showFrame');
+const sandColorInput = document.getElementById('sandColor');
 const hideLanguagesInput = document.getElementById('hideLanguages');
 const showLegendCheckbox = document.getElementById('showLegend');
-const showDecorationsCheckbox = document.getElementById('showDecorations');
 const showBubblesCheckbox = document.getElementById('showBubbles');
 const showRocksCheckbox = document.getElementById('showRocks');
 const showPlantsCheckbox = document.getElementById('showPlants');
@@ -13,11 +15,15 @@ const showCastleCheckbox = document.getElementById('showCastle');
 const showChestCheckbox = document.getElementById('showChest');
 const showShellCheckbox = document.getElementById('showShell');
 const previewImg = document.getElementById('preview');
+const previewContainer = document.querySelector('.preview-container');
 const loadingEl = document.getElementById('loading');
 const generatedUrlInput = document.getElementById('generatedUrl');
 const markdownCode = document.getElementById('markdownCode');
 const rateLimitSpan = document.getElementById('rateLimit');
-const colorValue = document.querySelector('.color-value');
+const urlSection = document.getElementById('urlSection');
+const bgColorValue = document.getElementById('bgColorValue');
+const frameColorValue = document.getElementById('frameColorValue');
+const sandColorValue = document.getElementById('sandColorValue');
 
 function generateAquarium() {
   const username = usernameInput.value.trim();
@@ -27,28 +33,32 @@ function generateAquarium() {
     return;
   }
   
-  const bgColor = bgColorInput.value.substring(1); // Remove #
+  const bgColor = bgColorInput.value.substring(1);
+  const frameColor = frameColorInput.value.substring(1);
+  const sandColor = sandColorInput.value.substring(1);
   const hide = hideLanguagesInput.value.trim();
   const showLegend = showLegendCheckbox.checked;
-  const showDecorations = showDecorationsCheckbox.checked;
   const showBubbles = showBubblesCheckbox.checked;
   const showRocks = showRocksCheckbox.checked;
   const showPlants = showPlantsCheckbox.checked;
   const showCastle = showCastleCheckbox.checked;
   const showChest = showChestCheckbox.checked;
   const showShell = showShellCheckbox.checked;
+  const showFrame = showFrameCheckbox.checked;
   
   const params = new URLSearchParams({
     user: username,
     bg: bgColor,
+    frame: frameColor,
+    sand: sandColor,
     show_legend: showLegend,
-    show_decorations: showDecorations,
     show_bubbles: showBubbles,
     show_rocks: showRocks,
     show_plants: showPlants,
     show_castle: showCastle,
     show_chest: showChest,
-    show_shell: showShell
+    show_shell: showShell,
+    show_frame: showFrame
   });
   
   if (hide) {
@@ -65,8 +75,10 @@ function generateAquarium() {
   previewImg.onload = () => {
     loadingEl.style.display = 'none';
     previewImg.style.opacity = '1';
+    previewContainer.classList.add('has-image');
     generateBtn.disabled = false;
     generateBtn.textContent = 'GENERATE';
+    urlSection.style.display = 'block';
   };
   
   previewImg.onerror = () => {
@@ -104,9 +116,21 @@ async function checkRateLimit() {
   }
 }
 
-function updateColorValue() {
-  if (colorValue) {
-    colorValue.textContent = bgColorInput.value;
+function updateBgColorValue() {
+  if (bgColorValue) {
+    bgColorValue.textContent = bgColorInput.value;
+  }
+}
+
+function updateFrameColorValue() {
+  if (frameColorValue) {
+    frameColorValue.textContent = frameColorInput.value;
+  }
+}
+
+function updateSandColorValue() {
+  if (sandColorValue) {
+    sandColorValue.textContent = sandColorInput.value;
   }
 }
 
@@ -116,7 +140,9 @@ usernameInput.addEventListener('keypress', (e) => {
     generateAquarium();
   }
 });
-bgColorInput.addEventListener('input', updateColorValue);
+bgColorInput.addEventListener('input', updateBgColorValue);
+frameColorInput.addEventListener('input', updateFrameColorValue);
+sandColorInput.addEventListener('input', updateSandColorValue);
 
 checkRateLimit();
 

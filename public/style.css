@@ -146,15 +146,12 @@ main {
 }
 
 
-.username-input-wrapper input {
-  border-right: var(--border) !important;
-}
-
 @media (max-width: 768px) {
   .generate-button {
     padding: 14px 32px;
     font-size: 16px;
-    width: 100%;
+    width: auto;
+    max-width: calc(100% - 48px);
   }
 }
 
@@ -171,6 +168,7 @@ main {
   border: var(--border);
   cursor: pointer;
   background: var(--light);
+  flex-shrink: 0;
 }
 
 .color-value {
@@ -180,6 +178,19 @@ main {
   background: var(--accent);
   padding: 8px 12px;
   border: var(--border);
+}
+
+.colors-row {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.colors-row .input-group {
+  border-bottom: var(--border);
+  border-right: var(--border);
+}
+
+.colors-row .input-group:last-child {
+  border-right: none;
 }
 
 .toggles-section {
@@ -273,25 +284,32 @@ main {
 }
 
 .preview-container {
-  background: #0a192f;
   border: var(--border);
   box-shadow: var(--shadow);
-  min-height: 300px;
+  min-height: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   overflow: hidden;
+  background: var(--light);
+}
+
+.preview-container.has-image {
+  min-height: auto;
+  background: transparent;
 }
 
 #preview {
   max-width: 100%;
   display: block;
+  width: 100%;
+  height: auto;
 }
 
 .loading {
   position: absolute;
-  color: var(--primary);
+  color: var(--dark);
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 2px;
@@ -402,6 +420,14 @@ footer p {
   }
 
   .config-grid .input-group {
+    border-right: none;
+  }
+
+  .colors-row {
+    grid-template-columns: 1fr;
+  }
+
+  .colors-row .input-group {
     border-right: none;
   }
   

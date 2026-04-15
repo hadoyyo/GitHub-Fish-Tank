@@ -13,6 +13,8 @@ app.get('/api/generate', async (req, res) => {
     const { 
       user, 
       bg = '0a192f',
+      frame = '3a4a5a',
+      sand = 'C4A574', 
       hide = '',
       show_legend = 'true',
       show_decorations = 'true',
@@ -22,6 +24,7 @@ app.get('/api/generate', async (req, res) => {
       show_castle = 'true',
       show_chest = 'true',
       show_shell = 'true',
+      show_frame = 'true', 
       shape_map = '{}'
     } = req.query;
     
@@ -38,6 +41,8 @@ app.get('/api/generate', async (req, res) => {
     }
     
     const bgColor = bg.startsWith('#') ? bg : `#${bg}`;
+    const frameColor = frame.startsWith('#') ? frame : `#${frame}`; 
+    const sandColor = sand.startsWith('#') ? sand : `#${sand}`;
     const showLegend = show_legend === 'true';
     const showDecorations = show_decorations === 'true';
     const showBubbles = show_bubbles === 'true';
@@ -46,6 +51,7 @@ app.get('/api/generate', async (req, res) => {
     const showCastle = show_castle === 'true';
     const showChest = show_chest === 'true';
     const showShell = show_shell === 'true';
+    const showFrame = show_frame === 'true';
     
     const repos = await fetchUserRepos(user);
     
@@ -70,6 +76,8 @@ app.get('/api/generate', async (req, res) => {
     
     const svg = generateAquariumSVG(languageStats, {
       bgColor,
+      frameColor,
+      sandColor,
       showLegend,
       showDecorations,
       showBubbles,
@@ -78,6 +86,7 @@ app.get('/api/generate', async (req, res) => {
       showCastle,
       showChest,
       showShell,
+      showFrame,
       shapePreference
     });
     
@@ -112,7 +121,6 @@ app.get('/api/rate-limit', async (req, res) => {
   }
 });
 
-// Fallback for SPA
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });

@@ -6,6 +6,8 @@ export default async function handler(req, res) {
     const { 
       user, 
       bg = '0a192f',
+      frame = '3a4a5a',
+      sand = 'C4A574', 
       hide = '',
       show_legend = 'true',
       show_decorations = 'true',
@@ -15,6 +17,7 @@ export default async function handler(req, res) {
       show_castle = 'true',
       show_chest = 'true',
       show_shell = 'true',
+      show_frame = 'true',
       shape_map = '{}'
     } = req.query;
     
@@ -39,10 +42,10 @@ export default async function handler(req, res) {
     const showCastle = show_castle === 'true';
     const showChest = show_chest === 'true';
     const showShell = show_shell === 'true';
+    const showFrame = show_frame === 'true';
     
     const repos = await fetchUserRepos(user);
     
-    // language statistics
     const languageStats = calculateLanguageStats(repos, { 
       excludeLanguages,
       excludeForks: true 
@@ -64,6 +67,8 @@ export default async function handler(req, res) {
     
     const svg = generateAquariumSVG(languageStats, {
       bgColor,
+      frameColor,
+      sandColor,
       showLegend,
       showDecorations,
       showBubbles,
@@ -72,6 +77,7 @@ export default async function handler(req, res) {
       showCastle,
       showChest,
       showShell,
+      showFrame,
       shapePreference
     });
     

@@ -17,24 +17,40 @@
     <main>
       <div class="config-panel">
         <div class="config-grid">
-          <div class="input-group username-group">
-            <label for="username">GitHub Username</label>
-            <div class="username-input-wrapper">
-              <input type="text" id="username" placeholder="e.g., octocat" value="">
-            </div>
-          </div>
-          
           <div class="input-group">
-            <label for="bgColor">Background Color</label>
-            <div class="color-input-wrapper">
-              <input type="color" id="bgColor" value="#0a192f">
-              <span class="color-value">#0a192f</span>
-            </div>
+            <label for="username">GitHub Username</label>
+            <input type="text" id="username" placeholder="e.g., octocat" value="">
           </div>
           
           <div class="input-group">
             <label for="hideLanguages">Hide Languages</label>
             <input type="text" id="hideLanguages" placeholder="e.g., HTML, CSS">
+          </div>
+        </div>
+        
+        <div class="config-grid colors-row">
+          <div class="input-group">
+            <label for="bgColor">Background Color</label>
+            <div class="color-input-wrapper">
+              <input type="color" id="bgColor" value="#0a192f">
+              <span class="color-value" id="bgColorValue">#0a192f</span>
+            </div>
+          </div>
+          
+          <div class="input-group">
+            <label for="frameColor">Frame Color</label>
+            <div class="color-input-wrapper">
+              <input type="color" id="frameColor" value="#3a4a5a">
+              <span class="color-value" id="frameColorValue">#3a4a5a</span>
+            </div>
+          </div>
+          
+          <div class="input-group">
+            <label for="sandColor">Sand Color</label>
+            <div class="color-input-wrapper">
+              <input type="color" id="sandColor" value="#C4A574">
+              <span class="color-value" id="sandColorValue">#C4A574</span>
+            </div>
           </div>
         </div>
         
@@ -49,13 +65,14 @@
               <span class="toggle-label">Legend</span>
             </div>
             
-            <div class="toggle-group">
+             <div class="toggle-group">
               <label class="toggle">
-                <input type="checkbox" id="showDecorations" checked>
+                <input type="checkbox" id="showFrame" checked>
                 <span class="toggle-slider"></span>
               </label>
-              <span class="toggle-label">Decorations</span>
+              <span class="toggle-label">Frame</span>
             </div>
+
             
             <div class="toggle-group">
               <label class="toggle">
@@ -117,7 +134,7 @@
           </div>
         </div>
         
-        <div class="url-section">
+<div class="url-section" id="urlSection" style="display: none;">
           <h3>YOUR README URL</h3>
           <div class="url-container">
             <input type="text" id="generatedUrl" readonly>
