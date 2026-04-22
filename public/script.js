@@ -11,7 +11,9 @@ const showLegendCheckbox = document.getElementById('showLegend');
 const showBubblesCheckbox = document.getElementById('showBubbles');
 const showRocksCheckbox = document.getElementById('showRocks');
 const showPlantsCheckbox = document.getElementById('showPlants');
+const showPlantsAltCheckbox = document.getElementById('showPlantsAlt');
 const showCastleCheckbox = document.getElementById('showCastle');
+const showShipCheckbox = document.getElementById('showShip');
 const showChestCheckbox = document.getElementById('showChest');
 const showShellCheckbox = document.getElementById('showShell');
 const previewImg = document.getElementById('preview');
@@ -24,6 +26,30 @@ const urlSection = document.getElementById('urlSection');
 const bgColorValue = document.getElementById('bgColorValue');
 const frameColorValue = document.getElementById('frameColorValue');
 const sandColorValue = document.getElementById('sandColorValue');
+
+showPlantsCheckbox.addEventListener('change', function() {
+    if (this.checked) {
+        showPlantsAltCheckbox.checked = false;
+    }
+});
+
+showPlantsAltCheckbox.addEventListener('change', function() {
+    if (this.checked) {
+        showPlantsCheckbox.checked = false;
+    }
+});
+
+showCastleCheckbox.addEventListener('change', function() {
+    if (this.checked) {
+        showShipCheckbox.checked = false;
+    }
+});
+
+showShipCheckbox.addEventListener('change', function() {
+    if (this.checked) {
+        showCastleCheckbox.checked = false;
+    }
+});
 
 function generateAquarium() {
   const username = usernameInput.value.trim();
@@ -41,7 +67,9 @@ function generateAquarium() {
   const showBubbles = showBubblesCheckbox.checked;
   const showRocks = showRocksCheckbox.checked;
   const showPlants = showPlantsCheckbox.checked;
+  const showPlantsAlt = showPlantsAltCheckbox.checked;
   const showCastle = showCastleCheckbox.checked;
+  const showShip = showShipCheckbox.checked;
   const showChest = showChestCheckbox.checked;
   const showShell = showShellCheckbox.checked;
   const showFrame = showFrameCheckbox.checked;
@@ -55,7 +83,9 @@ function generateAquarium() {
     show_bubbles: showBubbles,
     show_rocks: showRocks,
     show_plants: showPlants,
+    show_plants_alt: showPlantsAlt,
     show_castle: showCastle,
+    show_ship: showShip,
     show_chest: showChest,
     show_shell: showShell,
     show_frame: showFrame

@@ -21,7 +21,9 @@ app.get('/api/generate', async (req, res) => {
       show_bubbles = 'true',
       show_rocks = 'true',
       show_plants = 'true',
+      show_plants_alt = 'false',
       show_castle = 'true',
+      show_ship = 'false',
       show_chest = 'true',
       show_shell = 'true',
       show_frame = 'true', 
@@ -48,7 +50,9 @@ app.get('/api/generate', async (req, res) => {
     const showBubbles = show_bubbles === 'true';
     const showRocks = show_rocks === 'true';
     const showPlants = show_plants === 'true';
+    const showPlantsAlt = show_plants_alt === 'true';
     const showCastle = show_castle === 'true';
+    const showShip = show_ship === 'true';
     const showChest = show_chest === 'true';
     const showShell = show_shell === 'true';
     const showFrame = show_frame === 'true';
@@ -83,7 +87,9 @@ app.get('/api/generate', async (req, res) => {
       showBubbles,
       showRocks,
       showPlants,
+      showPlantsAlt,
       showCastle,
+      showShip,
       showChest,
       showShell,
       showFrame,
