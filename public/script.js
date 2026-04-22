@@ -25,6 +25,7 @@ const generatedUrlInput = document.getElementById('generatedUrl');
 const markdownCode = document.getElementById('markdownCode');
 const rateLimitSpan = document.getElementById('rateLimit');
 const urlSection = document.getElementById('urlSection');
+const previewSection = document.getElementById('previewSection');
 const bgColorValue = document.getElementById('bgColorValue');
 const frameColorValue = document.getElementById('frameColorValue');
 const sandColorValue = document.getElementById('sandColorValue');
@@ -139,6 +140,7 @@ function generateAquarium() {
     generateBtn.disabled = false;
     generateBtn.textContent = 'GENERATE';
     urlSection.style.display = 'block';
+    previewSection.style.display = 'block';
   };
   
   previewImg.onerror = () => {
