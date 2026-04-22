@@ -8,6 +8,7 @@ const showFrameCheckbox = document.getElementById('showFrame');
 const sandColorInput = document.getElementById('sandColor');
 const hideLanguagesInput = document.getElementById('hideLanguages');
 const showLegendCheckbox = document.getElementById('showLegend');
+const showLanguageLabelsCheckbox = document.getElementById('showLanguageLabels');
 const showBubblesCheckbox = document.getElementById('showBubbles');
 const showRocksCheckbox = document.getElementById('showRocks');
 const showPlantsCheckbox = document.getElementById('showPlants');
@@ -91,6 +92,7 @@ function generateAquarium() {
   const sandColor = sandColorInput.value.substring(1);
   const hide = hideLanguagesInput.value.trim();
   const showLegend = showLegendCheckbox.checked;
+  const showLanguageLabels = showLanguageLabelsCheckbox.checked;
   const showBubbles = showBubblesCheckbox.checked;
   const showRocks = showRocksCheckbox.checked;
   const showPlants = showPlantsCheckbox.checked;
@@ -109,6 +111,7 @@ function generateAquarium() {
     frame: frameColor,
     sand: sandColor,
     show_legend: showLegend,
+    show_language_labels: showLanguageLabels,
     show_bubbles: showBubbles,
     show_rocks: showRocks,
     show_plants: showPlants,
@@ -129,25 +132,33 @@ function generateAquarium() {
   const url = `${API_BASE}/api/generate?${params.toString()}`;
   
   loadingEl.style.display = 'block';
-  previewImg.style.opacity = '0.5';
+  previewImg.style.opacity = '0';
   generateBtn.disabled = true;
   generateBtn.textContent = 'LOADING...';
   
+  const startTime = Date.now();
+  
+  const finishLoading = () => {
+    const elapsed = Date.now() - startTime;
+    const remaining = Math.max(0, 500 - elapsed);
+    
+    setTimeout(() => {
+      loadingEl.style.display = 'none';
+      previewImg.style.opacity = '1';
+      generateBtn.disabled = false;
+      generateBtn.textContent = 'GENERATE';
+    }, remaining);
+  };
+  
   previewImg.onload = () => {
-    loadingEl.style.display = 'none';
-    previewImg.style.opacity = '1';
+    finishLoading();
     previewContainer.classList.add('has-image');
-    generateBtn.disabled = false;
-    generateBtn.textContent = 'GENERATE';
     urlSection.style.display = 'block';
     previewSection.style.display = 'block';
   };
   
   previewImg.onerror = () => {
-    loadingEl.style.display = 'none';
-    previewImg.style.opacity = '1';
-    generateBtn.disabled = false;
-    generateBtn.textContent = 'GENERATE';
+    finishLoading();
     alert('Error generating aquarium. Please check the username.');
   };
   
