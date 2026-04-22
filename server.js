@@ -26,7 +26,9 @@ app.get('/api/generate', async (req, res) => {
       show_ship = 'false',
       show_chest = 'true',
       show_shell = 'true',
-      show_frame = 'true', 
+      show_frame = 'true',
+      show_anubias = 'false',
+      show_statue = 'false',
       shape_map = '{}'
     } = req.query;
     
@@ -56,6 +58,8 @@ app.get('/api/generate', async (req, res) => {
     const showChest = show_chest === 'true';
     const showShell = show_shell === 'true';
     const showFrame = show_frame === 'true';
+    const showAnubias = show_anubias === 'true';
+    const showStatue = show_statue === 'true';
     
     const repos = await fetchUserRepos(user);
     
@@ -93,6 +97,8 @@ app.get('/api/generate', async (req, res) => {
       showChest,
       showShell,
       showFrame,
+      showAnubias,
+      showStatue,
       shapePreference
     });
     

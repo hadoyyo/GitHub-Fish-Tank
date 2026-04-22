@@ -16,6 +16,8 @@ const showCastleCheckbox = document.getElementById('showCastle');
 const showShipCheckbox = document.getElementById('showShip');
 const showChestCheckbox = document.getElementById('showChest');
 const showShellCheckbox = document.getElementById('showShell');
+const showAnubiasCheckbox = document.getElementById('showAnubias');
+const showStatueCheckbox = document.getElementById('showStatue');
 const previewImg = document.getElementById('preview');
 const previewContainer = document.querySelector('.preview-container');
 const loadingEl = document.getElementById('loading');
@@ -51,6 +53,30 @@ showShipCheckbox.addEventListener('change', function() {
     }
 });
 
+showChestCheckbox.addEventListener('change', function() {
+    if (this.checked) {
+        showAnubiasCheckbox.checked = false;
+    }
+});
+
+showAnubiasCheckbox.addEventListener('change', function() {
+    if (this.checked) {
+        showChestCheckbox.checked = false;
+    }
+});
+
+showShellCheckbox.addEventListener('change', function() {
+    if (this.checked) {
+        showStatueCheckbox.checked = false;
+    }
+});
+
+showStatueCheckbox.addEventListener('change', function() {
+    if (this.checked) {
+        showShellCheckbox.checked = false;
+    }
+});
+
 function generateAquarium() {
   const username = usernameInput.value.trim();
   if (!username) {
@@ -73,6 +99,8 @@ function generateAquarium() {
   const showChest = showChestCheckbox.checked;
   const showShell = showShellCheckbox.checked;
   const showFrame = showFrameCheckbox.checked;
+  const showAnubias = showAnubiasCheckbox.checked;
+  const showStatue = showStatueCheckbox.checked;
   
   const params = new URLSearchParams({
     user: username,
@@ -88,7 +116,9 @@ function generateAquarium() {
     show_ship: showShip,
     show_chest: showChest,
     show_shell: showShell,
-    show_frame: showFrame
+    show_frame: showFrame,
+    show_anubias: showAnubias,
+    show_statue: showStatue
   });
   
   if (hide) {
