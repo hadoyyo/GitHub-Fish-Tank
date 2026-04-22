@@ -74,8 +74,6 @@ main {
 
 .config-grid .input-group {
   padding: 24px;
-  border-bottom: var(--border);
-  border-right: var(--border);
 }
 
 .config-grid .input-group:last-child {
@@ -182,11 +180,6 @@ main {
   grid-template-columns: repeat(3, 1fr);
 }
 
-.colors-row .input-group {
-  border-bottom: var(--border);
-  border-right: var(--border);
-}
-
 .colors-row .input-group:last-child {
   border-right: none;
 }
@@ -194,6 +187,7 @@ main {
 .toggles-section {
   padding: 24px;
   background: var(--accent);
+  border-top: var(--border);
   border-bottom: var(--border);
 }
 

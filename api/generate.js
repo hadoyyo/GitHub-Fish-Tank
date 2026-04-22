@@ -17,7 +17,7 @@ export default async function handler(req, res) {
       show_castle = 'true',
       show_chest = 'true',
       show_shell = 'true',
-      show_frame = 'true',
+      show_frame = 'false',
       shape_map = '{}'
     } = req.query;
     
