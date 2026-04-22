@@ -1,10 +1,10 @@
 const express = require('express');
 const path = require('path');
-const { fetchUserRepos, calculateLanguageStats } = require('./lib/github');
+const { fetchUserLanguageStats, calculateLanguageStats } = require('./lib/github');
 const { generateAquariumSVG } = require('./lib/renderer');
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = 3000;
 
 app.use(express.static('public'));
 
@@ -61,9 +61,7 @@ app.get('/api/generate', async (req, res) => {
     const showAnubias = show_anubias === 'true';
     const showStatue = show_statue === 'true';
     
-    const repos = await fetchUserRepos(user);
-    
-    const languageStats = calculateLanguageStats(repos, { 
+    const languageStats = await fetchUserLanguageStats(user, { 
       excludeLanguages,
       excludeForks: true 
     });

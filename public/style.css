@@ -23,16 +23,14 @@ body {
     linear-gradient(rgba(0,0,0,0.03) 1px, transparent 1px);
   background-size: 20px 20px;
   min-height: 100vh;
-  padding: 24px;
 }
 
 .container {
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 24px auto;
   background: var(--light);
   border: var(--border);
   box-shadow: var(--shadow);
-  padding: 0;
 }
 
 header {
@@ -406,8 +404,8 @@ footer p {
 }
 
 @media (max-width: 768px) {
-  body {
-    padding: 12px;
+  .container {
+    margin: 0 auto;
   }
 
   h1 {
