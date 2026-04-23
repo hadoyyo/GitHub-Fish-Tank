@@ -10,14 +10,19 @@ export default async function handler(req, res) {
       sand = 'C4A574', 
       hide = '',
       show_legend = 'true',
+      show_language_labels = 'true',
       show_decorations = 'true',
       show_bubbles = 'true',
       show_rocks = 'true',
       show_plants = 'true',
+      show_plants_alt = 'false',
       show_castle = 'true',
+      show_ship = 'false',
       show_chest = 'true',
       show_shell = 'true',
       show_frame = 'false',
+      show_anubias = 'false',
+      show_statue = 'false',
       shape_map = '{}'
     } = req.query;
     
@@ -34,15 +39,22 @@ export default async function handler(req, res) {
     }
     
     const bgColor = bg.startsWith('#') ? bg : `#${bg}`;
+    const frameColor = frame.startsWith('#') ? frame : `#${frame}`; 
+    const sandColor = sand.startsWith('#') ? sand : `#${sand}`;
     const showLegend = show_legend === 'true';
+    const showLanguageLabels = show_language_labels === 'true';
     const showDecorations = show_decorations === 'true';
     const showBubbles = show_bubbles === 'true';
     const showRocks = show_rocks === 'true';
     const showPlants = show_plants === 'true';
+    const showPlantsAlt = show_plants_alt === 'true';
     const showCastle = show_castle === 'true';
+    const showShip = show_ship === 'true';
     const showChest = show_chest === 'true';
     const showShell = show_shell === 'true';
     const showFrame = show_frame === 'true';
+    const showAnubias = show_anubias === 'true';
+    const showStatue = show_statue === 'true';
     
     const repos = await fetchUserRepos(user);
     
@@ -61,7 +73,7 @@ export default async function handler(req, res) {
         </svg>
       `;
       res.setHeader('Content-Type', 'image/svg+xml');
-      res.setHeader('Cache-Control', 'public, max-age=3600, s-maxage=3600');
+      res.setHeader('Cache-Control', 'public, max-age=3600');
       return res.send(emptySVG);
     }
     
@@ -70,14 +82,19 @@ export default async function handler(req, res) {
       frameColor,
       sandColor,
       showLegend,
+      showLanguageLabels,
       showDecorations,
       showBubbles,
       showRocks,
       showPlants,
+      showPlantsAlt,
       showCastle,
+      showShip,
       showChest,
       showShell,
       showFrame,
+      showAnubias,
+      showStatue,
       shapePreference
     });
     
