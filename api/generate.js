@@ -1,5 +1,5 @@
-const { fetchUserRepos, calculateLanguageStats } = require('../lib/github');
-const { generateAquariumSVG } = require('../lib/renderer');
+const { fetchUserLanguageStats, calculateLanguageStats } = require('./lib/github');
+const { generateAquariumSVG } = require('./lib/renderer');
 
 export default async function handler(req, res) {
   try {
@@ -56,9 +56,7 @@ export default async function handler(req, res) {
     const showAnubias = show_anubias === 'true';
     const showStatue = show_statue === 'true';
     
-    const repos = await fetchUserRepos(user);
-    
-    const languageStats = calculateLanguageStats(repos, { 
+    const languageStats = await fetchUserLanguageStats(user, { 
       excludeLanguages,
       excludeForks: true 
     });
