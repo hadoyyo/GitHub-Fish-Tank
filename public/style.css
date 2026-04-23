@@ -46,6 +46,26 @@ header {
   border-bottom: var(--border);
 }
 
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: nowrap;
+  padding: 0 16px;
+}
+
+.logo {
+  height: 72px;
+  width: 72px;
+  flex-shrink: 0;
+  border: 3px solid var(--dark);
+  box-shadow: 3px 3px 0px var(--dark);
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--dark);
+}
+
 h1 {
   font-size: 3em;
   font-weight: 700;
