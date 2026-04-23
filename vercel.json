@@ -2,6 +2,9 @@
   "functions": {
     "api/generate.js": {
       "maxDuration": 10
+    },
+    "api/rate-limit.js": {
+      "maxDuration": 10
     }
   },
   "headers": [
@@ -17,6 +20,12 @@
           "value": "GET, OPTIONS"
         }
       ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/public/index.html"
     }
   ]
 }
