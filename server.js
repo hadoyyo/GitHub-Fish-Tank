@@ -17,6 +17,7 @@ app.get('/api/generate', async (req, res) => {
       sand = 'C4A574', 
       hide = '',
       show_legend = 'true',
+      show_language_labels = 'true',
       show_decorations = 'true',
       show_bubbles = 'true',
       show_rocks = 'true',
@@ -48,6 +49,7 @@ app.get('/api/generate', async (req, res) => {
     const frameColor = frame.startsWith('#') ? frame : `#${frame}`; 
     const sandColor = sand.startsWith('#') ? sand : `#${sand}`;
     const showLegend = show_legend === 'true';
+    const showLanguageLabels = show_language_labels === 'true';
     const showDecorations = show_decorations === 'true';
     const showBubbles = show_bubbles === 'true';
     const showRocks = show_rocks === 'true';
@@ -85,6 +87,7 @@ app.get('/api/generate', async (req, res) => {
       frameColor,
       sandColor,
       showLegend,
+      showLanguageLabels,
       showDecorations,
       showBubbles,
       showRocks,

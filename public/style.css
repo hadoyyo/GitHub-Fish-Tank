@@ -404,9 +404,16 @@ footer p {
   letter-spacing: 1px;
 }
 
-#rateLimit {
+footer a {
   font-weight: 700;
   color: var(--accent);
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+footer a:hover {
+  opacity: 0.8;
+  text-decoration: underline;
 }
 
 @media (max-width: 768px) {
