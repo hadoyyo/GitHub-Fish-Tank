@@ -24,7 +24,6 @@ const previewContainer = document.querySelector('.preview-container');
 const loadingEl = document.getElementById('loading');
 const generatedUrlInput = document.getElementById('generatedUrl');
 const markdownCode = document.getElementById('markdownCode');
-const rateLimitSpan = document.getElementById('rateLimit');
 const urlSection = document.getElementById('urlSection');
 const previewSection = document.getElementById('previewSection');
 const bgColorValue = document.getElementById('bgColorValue');
@@ -179,16 +178,6 @@ function copyUrl() {
   }, 2000);
 }
 
-async function checkRateLimit() {
-  try {
-    const response = await fetch(`${API_BASE}/api/rate-limit`);
-    const data = await response.json();
-    rateLimitSpan.textContent = `${data.remaining}/${data.limit} (resets ${new Date(data.reset).toLocaleTimeString()})`;
-  } catch (error) {
-    rateLimitSpan.textContent = 'Error checking limit';
-  }
-}
-
 function updateBgColorValue() {
   if (bgColorValue) {
     bgColorValue.textContent = bgColorInput.value;
@@ -216,7 +205,3 @@ usernameInput.addEventListener('keypress', (e) => {
 bgColorInput.addEventListener('input', updateBgColorValue);
 frameColorInput.addEventListener('input', updateFrameColorValue);
 sandColorInput.addEventListener('input', updateSandColorValue);
-
-checkRateLimit();
-
-setInterval(checkRateLimit, 30000);
