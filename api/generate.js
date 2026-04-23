@@ -1,5 +1,5 @@
-const { fetchUserLanguageStats, calculateLanguageStats } = require('./lib/github');
-const { generateAquariumSVG } = require('./lib/renderer');
+const { fetchUserLanguageStats, calculateLanguageStats } = require('../lib/github');
+const { generateAquariumSVG } = require('../lib/renderer');
 
 export default async function handler(req, res) {
   try {
