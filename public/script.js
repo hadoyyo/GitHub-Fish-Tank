@@ -163,7 +163,7 @@ function generateAquarium() {
   
   previewImg.src = url;
   generatedUrlInput.value = url;
-  markdownCode.textContent = `[![GitHub Fish Tank](${url})](https://github.com/${username})`;
+  markdownCode.textContent = `[![GitHub Fish Tank](${url})](https://github.com/hadoyyo/GitHub-Fish-Tank)`;
 }
 
 function copyUrl() {
