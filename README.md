@@ -183,8 +183,11 @@ List of languages that have a unique fish model:
   <tr>
     <td>C</td><td><img src="./img/lang/c.svg" width="80" style="transform: scaleX(-1);"/></td><td style="border-left: 1px solid #424346;">TeX</td><td><img src="./img/lang/tex.svg" width="80"/></td><td style="border-left: 1px solid #424346;">Nix</td><td><img src="./img/lang/nix.svg" width="80"/></td>
   </tr>
+    <tr>
+    <td>Assembly</td><td><img src="./img/lang/assembly.svg" width="80"/></td><td style="border-left: 1px solid #424346;">Svelte</td><td><img src="./img/lang/svelte.svg" width="80"/></td><td style="border-left: 1px solid #424346;">Solidity</td><td><img src="./img/lang/solidity.svg" width="80"/></td>
+  </tr>
   <tr>
-    <td></td><td></td><td style="border-left: 1px solid #424346;">Assembly</td><td><img src="./img/lang/assembly.svg" width="80"/></td><td style="border-left: 1px solid #424346;"></td><td></td>
+    <td>Zig</td><td><img src="./img/lang/zig.svg" width="80"/></td><td style="border-left: 1px solid #424346;">Fortran</td><td><img src="./img/lang/fortran.svg" width="80"/></td><td style="border-left: 1px solid #424346;"></td><td></td>
   </tr>
 </table>
 
