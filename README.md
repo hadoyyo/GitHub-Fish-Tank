@@ -29,7 +29,7 @@ GitHub Fish Tank is a web application that transforms your GitHub language stati
 [![https://vercel.com/](./img/powered-by-vercel.svg)](https://vercel.com/)
 
 ## Features
-- 🐠 34 Custom-designed fish models for specific programming languages
+- 🐠 38 Custom-designed fish models for specific programming languages
 - 📊 Fish size is proportional to the percentage share of each language
 - 🎨 Customizable aquarium appearance and decorations
 - 🏷️ Optional legend and labels displayed on each fish
