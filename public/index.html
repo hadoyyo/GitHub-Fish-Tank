@@ -6,199 +6,340 @@
   <title>GitHub Fish Tank Generator</title>
   <link rel="shortcut icon" href="/favicon.ico">
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="container">
-  <header>
-    <div class="header-content">
-      <img 
-        src="logo.png" 
-        alt="GitHub Fish Tank" 
-        class="logo"
-        style="height: 72px; width: 72px; flex-shrink: 0; border: 3px solid #1a1a1a; box-shadow: 3px 3px 0px #1a1a1a; border-radius: 50%; object-fit: cover; background: #1a1a1a;"
-      />
-      <div style="min-width: 0;">
-        <h1 style="margin-bottom: 4px; font-size: clamp(1.5em, 4vw, 3em);">GITHUB FISH TANK</h1>
-        <p class="subtitle" style="margin: 0;">Transform your GitHub languages into a living aquarium</p>
+    <header>
+      <div class="badge-pill">
+        <span class="status-dot"></span>
+        <span>SVG AQUARIUM GENERATOR</span>
       </div>
-    </div>
-  </header>
+      <div class="header-content">
+        <img 
+          src="logo.png" 
+          alt="GitHub Fish Tank" 
+          class="logo"
+        />
+        <div class="header-text">
+          <h1>GitHub Fish Tank</h1>
+          <p class="subtitle">Turn your GitHub languages into a living aquarium</p>
+        </div>
+      </div>
+    </header>
+
+    <div class="header-divider"></div>
     
     <main>
       <div class="config-panel">
-        <div class="config-grid">
-          <div class="input-group">
-            <label for="username">GitHub Username</label>
-            <input type="text" id="username" placeholder="e.g., octocat" value="">
+        <!-- Profile Inputs Section -->
+        <div class="section-box">
+          <div class="section-header">
+            <span class="section-number">01</span>
+            <h2>GITHUB PROFILE</h2>
           </div>
-          
-          <div class="input-group">
-            <label for="hideLanguages">Hide Languages</label>
-            <input type="text" id="hideLanguages" placeholder="e.g., HTML, CSS">
-          </div>
-        </div>
-        
-        <div class="config-grid colors-row">
-          <div class="input-group">
-            <label for="bgColor">Background Color</label>
-            <div class="color-input-wrapper">
-              <input type="color" id="bgColor" value="#4ecdc4">
-              <span class="color-value" id="bgColorValue">#4ecdc4</span>
+          <div class="config-grid">
+            <div class="input-group">
+              <label for="username">GitHub Username</label>
+              <div class="input-with-prefix">
+                <span class="input-prefix">@</span>
+                <input type="text" id="username" placeholder="e.g., octocat" value="">
+              </div>
             </div>
-          </div>
-          
-          <div class="input-group">
-            <label for="frameColor">Frame Color</label>
-            <div class="color-input-wrapper">
-              <input type="color" id="frameColor" value="#3a4a5a">
-              <span class="color-value" id="frameColorValue">#3a4a5a</span>
-            </div>
-          </div>
-          
-          <div class="input-group">
-            <label for="sandColor">Sand Color</label>
-            <div class="color-input-wrapper">
-              <input type="color" id="sandColor" value="#c4a574">
-              <span class="color-value" id="sandColorValue">#c4a574</span>
+            
+            <div class="input-group">
+              <label for="hideLanguages">Hide Languages (Optional)</label>
+              <input type="text" id="hideLanguages" placeholder="e.g., HTML, CSS, Jupyter Notebook">
+              <span class="input-hint">Comma separated list of languages to exclude</span>
             </div>
           </div>
         </div>
-        
-        <div class="toggles-section">
-          <h3>Display Options</h3>
-          <div class="toggles-grid">
-            <div class="toggle-group">
-              <label class="toggle">
-                <input type="checkbox" id="showLegend" checked>
-                <span class="toggle-slider"></span>
-              </label>
-              <span class="toggle-label">Legend</span>
-            </div>
 
-            <div class="toggle-group">
-              <label class="toggle">
-                <input type="checkbox" id="showLanguageLabels" checked>
-                <span class="toggle-slider"></span>
-              </label>
-              <span class="toggle-label">Labels</span>
-            </div>
-            
-             <div class="toggle-group">
-              <label class="toggle">
-                <input type="checkbox" id="showFrame">
-                <span class="toggle-slider"></span>
-              </label>
-              <span class="toggle-label">Frame</span>
-            </div>
+        <!-- Color Palette Section with Hover Popover Dialog Bubbles -->
+        <div class="section-box">
+          <div class="section-header">
+            <span class="section-number">02</span>
+            <h2>AQUARIUM PALETTE</h2>
+          </div>
 
-            
-            <div class="toggle-group">
-              <label class="toggle">
-                <input type="checkbox" id="showBubbles" checked>
-                <span class="toggle-slider"></span>
-              </label>
-              <span class="toggle-label">Bubbles</span>
-            </div>
-            
-            <div class="toggle-group">
-              <label class="toggle">
-                <input type="checkbox" id="showPlants" checked>
-                <span class="toggle-slider"></span>
-              </label>
-              <span class="toggle-label">Plants #1</span>
-            </div>
-            <div class="toggle-group">
-              <label class="toggle">
-                <input type="checkbox" id="showPlantsAlt">
-                <span class="toggle-slider"></span>
-              </label>
-              <span class="toggle-label">Plants #2</span>
-            </div>
-            
-            <div class="toggle-group">
-              <label class="toggle">
-                <input type="checkbox" id="showCastle" checked>
-                <span class="toggle-slider"></span>
-              </label>
-              <span class="toggle-label">Castle</span>
-            </div>
-            <div class="toggle-group">
-              <label class="toggle">
-                <input type="checkbox" id="showShip">
-                <span class="toggle-slider"></span>
-              </label>
-              <span class="toggle-label">Ship</span>
-            </div>
-            
-              <div class="toggle-group">
-                <label class="toggle">
-                  <input type="checkbox" id="showChest" checked>
-                  <span class="toggle-slider"></span>
-                </label>
-                <span class="toggle-label">Chest</span>
+          <div class="config-grid colors-row">
+            <!-- Water Color -->
+            <div class="input-group color-group">
+              <label>Water Color</label>
+              <div class="color-picker-container">
+                <div class="color-input-wrapper">
+                  <span class="color-current-dot" id="bgColorDot" style="background:#4ecdc4"></span>
+                  <span class="color-value" id="bgColorValue">#4ecdc4</span>
+                </div>
+                
+                <!-- Quick Selection Dialog Bubble on Hover -->
+                <div class="color-popover-bubble">
+                  <div class="popover-arrow"></div>
+                  <span class="popover-title">Suggested & Custom Color</span>
+                  <div class="swatches-row">
+                    <button type="button" class="swatch-btn" style="background:#4ecdc4" title="Lagoon Cyan" onclick="setColor('bgColor', '#4ecdc4')"></button>
+                    <button type="button" class="swatch-btn" style="background:#1a535c" title="Deep Sea" onclick="setColor('bgColor', '#1a535c')"></button>
+                    <button type="button" class="swatch-btn" style="background:#0a192f" title="Midnight Navy" onclick="setColor('bgColor', '#0a192f')"></button>
+                    <button type="button" class="swatch-btn" style="background:#00b4d8" title="Tropical Blue" onclick="setColor('bgColor', '#00b4d8')"></button>
+                    <button type="button" class="swatch-btn" style="background:#2ec4b6" title="Aqua Mint" onclick="setColor('bgColor', '#2ec4b6')"></button>
+                    <button type="button" class="swatch-btn" style="background:#0f2027" title="Abyss Black" onclick="setColor('bgColor', '#0f2027')"></button>
+                    <label class="swatch-btn custom-color-swatch" title="Custom color palette...">
+                      <input type="color" id="bgColor" value="#4ecdc4" class="hidden-color-input">
+                    </label>
+                  </div>
+                </div>
               </div>
-              <div class="toggle-group">
-                <label class="toggle">
-                  <input type="checkbox" id="showAnubias">
-                  <span class="toggle-slider"></span>
-                </label>
-                <span class="toggle-label">Anubias</span>
-              </div>
+            </div>
+            
+            <!-- Frame Color -->
+            <div class="input-group color-group" id="frameColorGroup">
+              <label>Frame Color</label>
+              <div class="color-picker-container">
+                <div class="color-input-wrapper">
+                  <span class="color-current-dot" id="frameColorDot" style="background:#3a4a5a"></span>
+                  <span class="color-value" id="frameColorValue">#3a4a5a</span>
+                </div>
 
-              <div class="toggle-group">
-                <label class="toggle">
-                  <input type="checkbox" id="showShell" checked>
-                  <span class="toggle-slider"></span>
-                </label>
-                <span class="toggle-label">Shell</span>
+                <!-- Quick Selection Dialog Bubble on Hover -->
+                <div class="color-popover-bubble">
+                  <div class="popover-arrow"></div>
+                  <span class="popover-title">Suggested & Custom Color</span>
+                  <div class="swatches-row">
+                    <button type="button" class="swatch-btn" style="background:#3a4a5a" title="Slate Gray" onclick="setColor('frameColor', '#3a4a5a')"></button>
+                    <button type="button" class="swatch-btn" style="background:#18181b" title="Obsidian Black" onclick="setColor('frameColor', '#18181b')"></button>
+                    <button type="button" class="swatch-btn" style="background:#4a5568" title="Steel" onclick="setColor('frameColor', '#4a5568')"></button>
+                    <button type="button" class="swatch-btn" style="background:#d4af37" title="Gold Accent" onclick="setColor('frameColor', '#d4af37')"></button>
+                    <button type="button" class="swatch-btn" style="background:#ffffff" title="Pure White" onclick="setColor('frameColor', '#ffffff')"></button>
+                    <button type="button" class="swatch-btn" style="background:#ff6b6b" title="Coral Accent" onclick="setColor('frameColor', '#ff6b6b')"></button>
+                    <label class="swatch-btn custom-color-swatch" title="Custom color palette...">
+                      <input type="color" id="frameColor" value="#3a4a5a" class="hidden-color-input">
+                    </label>
+                  </div>
+                </div>
               </div>
-              <div class="toggle-group">
-                <label class="toggle">
-                  <input type="checkbox" id="showStatue">
-                  <span class="toggle-slider"></span>
-                </label>
-                <span class="toggle-label">Statue</span>
-              </div>
+            </div>
+            
+            <!-- Sand Color -->
+            <div class="input-group color-group">
+              <label>Sand Color</label>
+              <div class="color-picker-container">
+                <div class="color-input-wrapper">
+                  <span class="color-current-dot" id="sandColorDot" style="background:#c4a574"></span>
+                  <span class="color-value" id="sandColorValue">#c4a574</span>
+                </div>
 
-              <div class="toggle-group">
-                <label class="toggle">
-                  <input type="checkbox" id="showRocks" checked>
-                  <span class="toggle-slider"></span>
-                </label>
-                <span class="toggle-label">Rocks</span>
+                <!-- Quick Selection Dialog Bubble on Hover -->
+                <div class="color-popover-bubble">
+                  <div class="popover-arrow"></div>
+                  <span class="popover-title">Suggested & Custom Color</span>
+                  <div class="swatches-row">
+                    <button type="button" class="swatch-btn" style="background:#c4a574" title="Golden Sand" onclick="setColor('sandColor', '#c4a574')"></button>
+                    <button type="button" class="swatch-btn" style="background:#e9d8a6" title="Ivory Coral Sand" onclick="setColor('sandColor', '#e9d8a6')"></button>
+                    <button type="button" class="swatch-btn" style="background:#d4a373" title="Desert Dune" onclick="setColor('sandColor', '#d4a373')"></button>
+                    <button type="button" class="swatch-btn" style="background:#2b2d42" title="Volcanic Black Sand" onclick="setColor('sandColor', '#2b2d42')"></button>
+                    <button type="button" class="swatch-btn" style="background:#8d99ae" title="River Stone Gray" onclick="setColor('sandColor', '#8d99ae')"></button>
+                    <button type="button" class="swatch-btn" style="background:#d8ebb5" title="Mossy Green Sand" onclick="setColor('sandColor', '#d8ebb5')"></button>
+                    <label class="swatch-btn custom-color-swatch" title="Custom color palette...">
+                      <input type="color" id="sandColor" value="#c4a574" class="hidden-color-input">
+                    </label>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
+        
+        <!-- Aquarium Options Section -->
+        <div class="section-box toggles-section">
+          <div class="section-header">
+            <span class="section-number">03</span>
+            <h2>DISPLAY & ENVIRONMENT</h2>
+          </div>
+
+          <div class="toggles-categories">
+            <!-- Overlays -->
+            <div class="toggle-category">
+              <span class="category-title">Overlays</span>
+              <div class="toggles-grid">
+                <div class="toggle-group">
+                  <label class="toggle">
+                    <input type="checkbox" id="showLegend" checked>
+                    <span class="toggle-slider"></span>
+                  </label>
+                  <span class="toggle-label">Legend</span>
+                </div>
+
+                <div class="toggle-group">
+                  <label class="toggle">
+                    <input type="checkbox" id="showLanguageLabels" checked>
+                    <span class="toggle-slider"></span>
+                  </label>
+                  <span class="toggle-label">Labels</span>
+                </div>
+                
+                <div class="toggle-group" id="frameToggleGroup">
+                  <label class="toggle">
+                    <input type="checkbox" id="showFrame">
+                    <span class="toggle-slider"></span>
+                  </label>
+                  <span class="toggle-label">Glass Frame</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Aquatic Nature -->
+            <div class="toggle-category">
+              <span class="category-title">Aquatic Environment</span>
+              <div class="toggles-grid">
+                <div class="toggle-group">
+                  <label class="toggle">
+                    <input type="checkbox" id="showBubbles" checked>
+                    <span class="toggle-slider"></span>
+                  </label>
+                  <span class="toggle-label">Bubbles</span>
+                </div>
+                
+                <div class="toggle-group">
+                  <label class="toggle">
+                    <input type="checkbox" id="showRocks" checked>
+                    <span class="toggle-slider"></span>
+                  </label>
+                  <span class="toggle-label">River Rocks</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Flora (Select one) -->
+            <div class="toggle-category">
+              <span class="category-title">Flora (Select one)</span>
+              <div class="toggles-grid">
+                <div class="toggle-group">
+                  <label class="toggle">
+                    <input type="checkbox" id="showPlants" checked>
+                    <span class="toggle-slider"></span>
+                  </label>
+                  <span class="toggle-label">Green Plants</span>
+                </div>
+                <div class="toggle-group">
+                  <label class="toggle">
+                    <input type="checkbox" id="showPlantsAlt">
+                    <span class="toggle-slider"></span>
+                  </label>
+                  <span class="toggle-label">Red Flora</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Decorations: Castle, Shipwreck, Shell, Statue, Treasure Chest, Anubias -->
+            <div class="toggle-category">
+              <span class="category-title">Scenery & Decorations</span>
+              <div class="toggles-grid">
+                <div class="toggle-group">
+                  <label class="toggle">
+                    <input type="checkbox" id="showCastle" checked>
+                    <span class="toggle-slider"></span>
+                  </label>
+                  <span class="toggle-label">Castle</span>
+                </div>
+                <div class="toggle-group">
+                  <label class="toggle">
+                    <input type="checkbox" id="showShip">
+                    <span class="toggle-slider"></span>
+                  </label>
+                  <span class="toggle-label">Shipwreck</span>
+                </div>
+                <div class="toggle-group">
+                  <label class="toggle">
+                    <input type="checkbox" id="showShell" checked>
+                    <span class="toggle-slider"></span>
+                  </label>
+                  <span class="toggle-label">Shell</span>
+                </div>
+                <div class="toggle-group">
+                  <label class="toggle">
+                    <input type="checkbox" id="showStatue">
+                    <span class="toggle-slider"></span>
+                  </label>
+                  <span class="toggle-label">Statue</span>
+                </div>
+                <div class="toggle-group">
+                  <label class="toggle">
+                    <input type="checkbox" id="showChest" checked>
+                    <span class="toggle-slider"></span>
+                  </label>
+                  <span class="toggle-label">Treasure Chest</span>
+                </div>
+                <div class="toggle-group">
+                  <label class="toggle">
+                    <input type="checkbox" id="showAnubias">
+                    <span class="toggle-slider"></span>
+                  </label>
+                  <span class="toggle-label">Anubias</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Generate CTA -->
         <div class="generate-button-wrapper">
-            <button type="button" id="generateBtn" class="generate-button">GENERATE</button>
+          <button type="button" id="generateBtn" class="generate-button">
+            <span>GENERATE AQUARIUM</span>
+            <span class="btn-arrow">→</span>
+          </button>
         </div>
+
+        <!-- Live Preview Section -->
         <div class="preview-section" id="previewSection" style="display: none;">
-          <h3>PREVIEW</h3>
+          <div class="preview-header">
+            <h3>LIVE AQUARIUM PREVIEW</h3>
+            <div class="preview-actions">
+              <button type="button" class="action-pill-btn" onclick="openSvgNewTab()">Open Full SVG ↗</button>
+            </div>
+          </div>
           <div class="preview-container">
-            <img id="preview" src="" alt="">
-            <div id="loading" class="loading">Loading...</div>
+            <img id="preview" src="" alt="Aquarium Preview">
+            <div id="loading" class="loading">
+              <span class="loading-spinner"></span>
+              <span>Diving into GitHub data...</span>
+            </div>
           </div>
         </div>
         
+        <!-- Embed Code & URL Section -->
         <div class="url-section" id="urlSection" style="display: none;">
-          <h3>YOUR README URL</h3>
-          <div class="url-container">
-            <input type="text" id="generatedUrl" readonly>
-            <button id="copyBtn" onclick="copyUrl()">COPY</button>
+          <div class="url-header">
+            <h3>ADD TO YOUR GITHUB PROFILE</h3>
           </div>
-          <p class="hint">Add this to your GitHub README.md:</p>
-          <code id="markdownCode"></code>
+
+          <div class="code-block-wrapper">
+            <div class="code-block-header">
+              <span>README.md</span>
+              <button type="button" class="copy-code-btn" id="copyMarkdownBtn" onclick="copyMarkdown()">Copy Markdown</button>
+            </div>
+            <code id="markdownCode"></code>
+          </div>
+
+          <div class="direct-url-box">
+            <label for="generatedUrl">Direct SVG URL</label>
+            <div class="url-container">
+              <input type="text" id="generatedUrl" readonly>
+              <button type="button" id="copyBtn" onclick="copyUrl()">Copy URL</button>
+            </div>
+          </div>
         </div>
       </div>
     </main>
+  </div>
     
-    <footer>
-      <p>Made with ❤️ and JavaScript by <a href="https://github.com/hadoyyo" style="color: #4ECDC4; text-decoration: none; font-weight: 700;">hadoyyo</a></p>
-    </footer>
+  <footer>
+    <p>Crafted with 🫧 and JavaScript &bull; GitHub Fish Tank</p>
+  </footer>
 
-  
+  <script src="fish-shapes.js"></script>
+  <script src="bg-fish.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
