@@ -2,23 +2,24 @@
     <svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <clipPath id="roundedCorners">
-          <rect x="0" y="0" width="800" height="400" rx="14" ry="14" />
+          <rect x="0" y="0" width="800" height="400" rx="16" ry="16" />
         </clipPath>
       </defs>
       <g clip-path="url(#roundedCorners)">
         
       <defs>
         <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" style="stop-color:#30008a;stop-opacity:1" />
-          <stop offset="50%" style="stop-color:#21007b;stop-opacity:1" />
-          <stop offset="100%" style="stop-color:#0d0067;stop-opacity:1" />
+          <stop offset="0%" style="stop-color:#29456a;stop-opacity:1" />
+          <stop offset="40%" style="stop-color:#1a365b;stop-opacity:1" />
+          <stop offset="85%" style="stop-color:#011d42;stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#000e33;stop-opacity:1" />
         </linearGradient>
         <linearGradient id="sandGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" style="stop-color:#8f8f8f;stop-opacity:1" />
-          <stop offset="100%" style="stop-color:#676767;stop-opacity:1" />
+          <stop offset="0%" style="stop-color:#696969;stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#414141;stop-opacity:1" />
         </linearGradient>
         <linearGradient id="reflectionGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.15" />
+          <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.18" />
           <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0" />
         </linearGradient>
       </defs>
@@ -26,9 +27,9 @@
     
         
     <path d="M0,375 Q80,365 160,372 Q240,362 320,375 Q400,368 480,372 Q560,365 640,375 Q720,370 800,372 L800,400 L0,400 Z" fill="url(#sandGrad)" />
-    <ellipse cx="100" cy="380" rx="30" ry="5" fill="#7b7b7b" opacity="0.4" />
-    <ellipse cx="500" cy="378" rx="45" ry="6" fill="#7b7b7b" opacity="0.3" />
-    <ellipse cx="700" cy="382" rx="25" ry="4" fill="#7b7b7b" opacity="0.4" />
+    <ellipse cx="100" cy="380" rx="30" ry="5" fill="#555555" opacity="0.4" />
+    <ellipse cx="500" cy="378" rx="45" ry="6" fill="#555555" opacity="0.3" />
+    <ellipse cx="700" cy="382" rx="25" ry="4" fill="#555555" opacity="0.4" />
   
       <g transform="translate(50, 350)">
         <ellipse cx="2.486" cy="31.955" rx="32.21" ry="5.856" fill="#000" opacity=".15" style="stroke-width:1"/>
@@ -144,9 +145,9 @@
         <animateTransform
           attributeName="transform"
           type="scale"
-          values="1.667669454369299 1.667669454369299; 1.667669454369299 1.667669454369299; -1.667669454369299 1.667669454369299; -1.667669454369299 1.667669454369299; 1.667669454369299 1.667669454369299"
-          keyTimes="0;0.5;0.5;1;1"
-          calcMode="discrete"
+          values="1.669062249582267 1.669062249582267; 1.669062249582267 1.669062249582267; -1.669062249582267 1.669062249582267; -1.669062249582267 1.669062249582267; 1.669062249582267 1.669062249582267"
+          keyTimes="0; 0.49; 0.50; 0.99; 1"
+          calcMode="linear"
           dur="43.658327041011944s"
           repeatCount="indefinite"
           begin="0.5487490561517916s"
@@ -163,14 +164,14 @@
           />
           
     <g>
-      <path d="M28.871-3.415 5.269-.882l-7.222 4.693-22.58-2.71v-9.032l22.58-2.71 7.232 5.307z" fill="#f34b7d" style="stroke-width:1;transform-box:fill-box;transform-origin:50% 50%" transform="scale(-1)"/>
-      <path d="m37.317-3.415-10.872-8.451V5.036z" fill="#f34b7d" style="stroke-width:1;transform-origin:31.881px -3.415px"/>
-      <circle cx="-11.476" cy="-5.221" r="2.146" fill="#000" style="stroke-width:1" transform="scale(-1 1)"/>
-      <circle cx="-11.025" cy="-5.673" r=".723" fill="#fff" style="stroke-width:1" transform="scale(-1 1)"/>
-      <path d="m-10.033-2.437 6.264 11.644 6.863-.835 4.118-.5-10.492-6.05-.189-8.01" fill="#f34b7d" opacity=".8" style="stroke-width:1;paint-order:fill;stroke-miterlimit:12.2;stroke-linejoin:bevel;transform-origin:-1.411px 1.509px" transform="matrix(0 -1.00001 .99999 0 0 0)"/>
-      <path d="m-7.226-2.323-2.309-3.059 5.48-10.188 6.864.834 4.118.501-10.492 6.048-.189 8.012" fill="#f34b7d" opacity=".8" style="stroke-width:1;paint-order:fill;stroke-miterlimit:12.2;stroke-linejoin:bevel;transform-origin:-1.304px -7.873px" transform="rotate(90)scale(1.00001 .99999)"/>
-      <path d="m-9.115-3.907-2.102-4.688-2.028 4.935L-11.31.952z" fill="#f34b7d" style="stroke-width:1;transform-origin:-5.834px .472px"/>
-      <path d="m-16.809-3.629-2.102-4.689-2.028 4.936 1.935 4.61z" fill="#f34b7d" style="stroke-width:1;transform-origin:-13.528px .75px"/>
+      <circle cx="19.924" cy="-8.125" r="2" fill="#000" style="stroke-width:1"/>
+      <circle cx="20.424" cy="-8.625" r=".8" fill="#fff" style="stroke-width:1"/>
+      <path fill="#3178c6" style="stroke-width:1" d="m24.705-4.661-12-11h-23v22h23z"/>
+      <path fill="#3178c6" opacity=".9" style="stroke-width:1" d="m-8.536-4.661-9-7v14z"/>
+      <path stroke="#fff" stroke-width=".8" style="stroke-width:.8" d="M-3.296-15.661v22m10-22v22"/>
+      <circle cx="17.704" cy="-7.661" r="2" fill="#000" style="stroke-width:1"/>
+      <circle cx="18.204" cy="-8.161" r=".8" fill="#fff" style="stroke-width:1"/>
+      <path fill="#3178c6" style="stroke-width:1" d="M6.104 6.248.58 1.951v8.594z"/>
     </g>
   
         </g>
@@ -179,14 +180,19 @@
       
       <text
         x="0"
-        y="36"
-        font-size="17"
-        fill="#fff"
-        font-family="monospace"
+        y="39"
+        font-size="12"
+        font-weight="600"
+        fill="#ffffff"
+        font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"
         text-anchor="middle"
-        opacity="0.9"
+        letter-spacing="0.4"
+        paint-order="stroke fill"
+        stroke="rgba(0, 0, 0, 0.55)"
+        stroke-width="2.5"
+        stroke-linejoin="round"
       >
-        C++
+        TypeScript
       </text>
       
     </g>
@@ -217,9 +223,9 @@
         <animateTransform
           attributeName="transform"
           type="scale"
-          values="-1.3683086475619508 1.3683086475619508; -1.3683086475619508 1.3683086475619508; 1.3683086475619508 1.3683086475619508; 1.3683086475619508 1.3683086475619508; -1.3683086475619508 1.3683086475619508"
-          keyTimes="0;0.5;0.5;1;1"
-          calcMode="discrete"
+          values="-1.5252852769225815 1.5252852769225815; -1.5252852769225815 1.5252852769225815; 1.5252852769225815 1.5252852769225815; 1.5252852769225815 1.5252852769225815; -1.5252852769225815 1.5252852769225815"
+          keyTimes="0; 0.49; 0.50; 0.99; 1"
+          calcMode="linear"
           dur="57.07986258130404s"
           repeatCount="indefinite"
           begin="4.203968299210828s"
@@ -236,13 +242,15 @@
           />
           
     <g>
-      <circle cx="8.18" cy="-15.633" r="2.988" fill="#000" style="stroke-width:1"/>
-      <circle cx="8.927" cy="-16.381" r="1.195" fill="#fff" style="stroke-width:1"/>
-      <path d="m15.656-10.437-26.291-19.718-5.189 5.295L1.053-10.437-16.172 3.986l5.537 5.295z" fill="#e34c26"/>
-      <path d="m5.913-10.521-7.88-5.909-7.72 5.909 7.72 5.91z" style="stroke-width:1" fill="#e34c26"/>
-      <circle cx="5.769" cy="-14.841" r="2.988" fill="#000" style="stroke-width:1"/>
-      <path d="m-6.807-10.547-7.88-5.909-7.72 5.909 7.72 5.909z" style="stroke-width:1" fill="#e34c26"/>
-      <circle cx="6.516" cy="-15.589" r="1.195" fill="#fff" style="stroke-width:1"/>
+      <path d="m22.377-1.528-8.122-4.8.337 9.548z" fill="#563d7c" style="stroke-width:1"/>
+      <ellipse cx="8.802" cy="-1.473" rx="9.413" ry="5.883" fill="#563d7c" style="stroke-width:1"/>
+      <path d="M-36.488 4.55c24.81 6.058 35.92 3.6 37.375-6.356" fill="#563d7c" opacity=".6" style="stroke-width:1;transform-origin:-13.373px 3.728px"/>
+      <path d="M-25.584-.628c8.961-8.778 17.729-8.597 27.748-.91" fill="#563d7c" opacity=".6" style="stroke-width:1;transform-origin:-11.285px -3.664px"/>
+      <path d="M-5.856-9.794c6.045-8.537 23.199 4.039 19.97 4.447" fill="#563d7c" opacity=".6" style="stroke-width:1;transform-origin:-1.17px -11.656px"/>
+      <circle cx="17.847" cy="-1.763" r="1.055" fill="#000" style="stroke-width:1"/>
+      <circle cx="18.252" cy="-2.027" r=".422" fill="#fff" style="stroke-width:1"/>
+      <path d="M1.371 7.293C5.89 9.138 13.602 5.908 12.818 2.608" fill="#563d7c" opacity=".6" style="stroke-width:1;transform-origin:9.228px 6.162px"/>
+      <path d="M6.92 9.911c4.368.257 9.325-4.859 7.705-7.432" fill="#563d7c" opacity=".6" style="stroke-width:1;transform-origin:13.258px 6.676px" transform="rotate(-2.03)"/>
     </g>
   
         </g>
@@ -252,13 +260,18 @@
       <text
         x="0"
         y="36"
-        font-size="17"
-        fill="#fff"
-        font-family="monospace"
+        font-size="12"
+        font-weight="600"
+        fill="#ffffff"
+        font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"
         text-anchor="middle"
-        opacity="0.9"
+        letter-spacing="0.4"
+        paint-order="stroke fill"
+        stroke="rgba(0, 0, 0, 0.55)"
+        stroke-width="2.5"
+        stroke-linejoin="round"
       >
-        HTML
+        CSS
       </text>
       
     </g>
@@ -289,9 +302,9 @@
         <animateTransform
           attributeName="transform"
           type="scale"
-          values="1.1759082434935642 1.1759082434935642; 1.1759082434935642 1.1759082434935642; -1.1759082434935642 1.1759082434935642; -1.1759082434935642 1.1759082434935642; 1.1759082434935642 1.1759082434935642"
-          keyTimes="0;0.5;0.5;1;1"
-          calcMode="discrete"
+          values="1.2698232841609098 1.2698232841609098; 1.2698232841609098 1.2698232841609098; -1.2698232841609098 1.2698232841609098; -1.2698232841609098 1.2698232841609098; 1.2698232841609098 1.2698232841609098"
+          keyTimes="0; 0.49; 0.50; 0.99; 1"
+          calcMode="linear"
           dur="47.59053605170266s"
           repeatCount="indefinite"
           begin="8.297555315053614s"
@@ -308,13 +321,17 @@
           />
           
     <g>
-        <path fill="#3572A5" d="M-1.55 1.627h34.278v7.555H-1.55z" style="stroke-width:1"/>
-        <rect x="-1.079" y="-18.462" width="17.667" height="8.668" rx="3.175" ry="3.175" fill="#3572A5" style="stroke-width:1;transform-origin:2.771px -5.496px" transform="rotate(45 -19.557 -15.527)"/>
-        <ellipse cx="21.281" cy="1.667" rx="11.447" ry="5.018" fill="#3572A5" style="stroke-width:1"/>
-        <circle cx="27.446" cy="2.637" r="2.101" fill="#fff" style="stroke-width:1"/>
-        <rect x="-1.079" y="-18.462" width="17.667" height="8.668" rx="3.175" ry="3.175" fill="#3572A5" style="stroke-width:1;transform-origin:10.848px -16.199px" transform="rotate(150 -15.07 6.672)"/>
-        <rect x="13.994" y="-7.709" width="17.667" height="8.668" rx="3.175" ry="3.175" fill="#3572A5" style="stroke-width:1;transform-origin:13.935px -3.786px" transform="matrix(-1 0 0 -1 -27.87 7.572)"/>
-        <rect x="-16.022" y="-9.2" width="17.667" height="8.668" rx="3.175" ry="3.175" fill="#3572A5" style="stroke-width:1;transform-origin:-16.081px -5.277px" transform="matrix(-1 0 0 -1 32.161 10.555)"/>
+      <path d="m-10.72-11.416-8-5v10z" fill="#000" opacity=".8" style="stroke-width:1"/>
+      <ellipse cx="2.66" cy="-11.416" rx="16" ry="14" fill="#f1e05a" style="stroke-width:1"/>
+      <path stroke="#f1e05a" stroke-width="2" stroke-linecap="round" style="stroke-width:2" d="M2.66-25.416v-7m10 11 5-5m-5 25 5 5m-14.995-1-.01 7M-8.007-1.026l-4 5m4.055-25.891-4-5"/>
+      <circle cx="12.66" cy="-14.416" r="2.5" fill="#000" style="stroke-width:1"/>
+      <circle cx="13.16" cy="-14.916" r="1" fill="#fff" style="stroke-width:1"/>
+      <path d="m3.876-1.249-4.202-3.72-.761 5.562z" fill="#000" opacity=".8" style="stroke-width:1;transform-origin:1.585px -1.719px"/>
+      <path style="fill:none;stroke:#000;stroke-width:1" d="M14.648-17.455c-3.146-1.45-5.246-.45-5.821 3.144"/>
+      <path stroke="#f1e05a" stroke-width="2" stroke-linecap="round" style="stroke-width:2;transform-origin:8.58px -22.373px" d="m7.347-21.906 2.466-6.627"/>
+      <path stroke="#f1e05a" stroke-width="2" stroke-linecap="round" style="stroke-width:2;transform-origin:8.486px 5.278px" d="M9.719 5.745 7.253-.882"/>
+      <path stroke="#f1e05a" stroke-width="2" stroke-linecap="round" style="stroke-width:2;transform-origin:-2.93px -22.351px" d="m-1.697-21.884-2.466-6.627"/>
+      <path stroke="#f1e05a" stroke-width="2" stroke-linecap="round" style="stroke-width:2;transform-origin:-3.229px 5.241px" d="m-4.462 5.708 2.466-6.627"/>
     </g>
   
         </g>
@@ -323,14 +340,19 @@
       
       <text
         x="0"
-        y="36"
-        font-size="17"
-        fill="#fff"
-        font-family="monospace"
+        y="32"
+        font-size="12"
+        font-weight="600"
+        fill="#ffffff"
+        font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"
         text-anchor="middle"
-        opacity="0.9"
+        letter-spacing="0.4"
+        paint-order="stroke fill"
+        stroke="rgba(0, 0, 0, 0.55)"
+        stroke-width="2.5"
+        stroke-linejoin="round"
       >
-        Python
+        JavaScript
       </text>
       
     </g>
@@ -361,9 +383,9 @@
         <animateTransform
           attributeName="transform"
           type="scale"
-          values="-1.1666703669843084 1.1666703669843084; -1.1666703669843084 1.1666703669843084; 1.1666703669843084 1.1666703669843084; 1.1666703669843084 1.1666703669843084; -1.1666703669843084 1.1666703669843084"
-          keyTimes="0;0.5;0.5;1;1"
-          calcMode="discrete"
+          values="-1.2250716623998301 1.2250716623998301; -1.2250716623998301 1.2250716623998301; 1.2250716623998301 1.2250716623998301; 1.2250716623998301 1.2250716623998301; -1.2250716623998301 1.2250716623998301"
+          keyTimes="0; 0.49; 0.50; 0.99; 1"
+          calcMode="linear"
           dur="51.85452201432781s"
           repeatCount="indefinite"
           begin="9.786468682559644s"
@@ -380,16 +402,13 @@
           />
           
     <g>
-      <circle cx="17.634" cy="-14.334" r="2.196" fill="#000" style="stroke-width:1;transform-origin:17.634px -14.334px"/>
-      <circle cx="18.182" cy="-14.882" r=".877" fill="#fff" style="stroke-width:1;transform-origin:17.634px -14.334px"/>
-      <path d="M-28.421-24.216c1.713 4.024 11.836 4.711 13.779-.024.347 7.12-13.522 7.83-13.779.024" fill="#DA5B0B" style="stroke-width:1;transform-origin:-21.527px -21.433px" transform="rotate(-19.203)"/>
-      <path d="M-20.97-21.195c5.46 12.85 37.793 15.044 43.998-.077 1.097 22.732-43.179 24.999-43.998.077" fill="#DA5B0B"/>
-      <circle cx="-.092" cy="-2.954" r="2.196" fill="gray"/>
-      <path d="M-1.736-5.515c1.712 4.026 11.838 4.713 13.781-.024.344 7.12-13.523 7.83-13.781.024" fill="#DA5B0B" style="stroke-width:1;transform-box:fill-box;transform-origin:50% 50%" transform="rotate(-25.234)"/>
-      <circle cx="5.024" cy="1.115" r="2.196" fill="gray" style="stroke-width:1"/>
-      <path d="M2.747-4.13C4.461-.106 14.585.583 16.528-4.154c.345 7.119-13.522 7.83-13.781.024" fill="#DA5B0B" style="stroke-width:1;transform-origin:9.64px -1.349px" transform="rotate(-55.218)"/>
-      <circle cx="16.279" cy="-13.012" r="2.196" fill="#000" style="stroke-width:1;transform-origin:16.279px -13.012px"/>
-      <circle cx="16.827" cy="-13.561" r=".877" fill="#fff" style="stroke-width:1;transform-origin:16.279px -13.012px"/>
+      <path d="M14.457.916.419-7.858V9.689z" fill="#fff" style="stroke-width:1"/>
+      <path d="M20.388.945 6.35-7.829V9.718z" fill="#fff" style="stroke-width:1"/>
+      <path d="m-13.736-4.248-14.037-8.773V4.526zM6.487-9.959l-14.036-8.773v17.547z" fill="#ff3e00" style="stroke-width:1"/>
+      <rect x="-12.439" y="-14.7" width="37.121" height="20.669" fill="#ff3e00" rx="10.335" ry="10.335"/>
+      <path style="fill:none;stroke:#fff;stroke-width:5px;transform-origin:-3.338px -4.134px" d="m-21.494-4.153 21.561.022 14.752.015"/>
+      <circle cx="14.69" cy="-4.12" r="3.372" fill="#000" style="stroke-width:1"/>
+      <circle cx="15.625" cy="-5.057" r="1.312" fill="#fff" style="stroke-width:1"/>
     </g>
     
         </g>
@@ -398,14 +417,19 @@
       
       <text
         x="0"
-        y="36"
-        font-size="17"
-        fill="#fff"
-        font-family="monospace"
+        y="32"
+        font-size="12"
+        font-weight="600"
+        fill="#ffffff"
+        font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"
         text-anchor="middle"
-        opacity="0.9"
+        letter-spacing="0.4"
+        paint-order="stroke fill"
+        stroke="rgba(0, 0, 0, 0.55)"
+        stroke-width="2.5"
+        stroke-linejoin="round"
       >
-        Jupyter Notebook
+        Svelte
       </text>
       
     </g>
@@ -436,9 +460,9 @@
         <animateTransform
           attributeName="transform"
           type="scale"
-          values="1.145883162209022 1.145883162209022; 1.145883162209022 1.145883162209022; -1.145883162209022 1.145883162209022; -1.145883162209022 1.145883162209022; 1.145883162209022 1.145883162209022"
-          keyTimes="0;0.5;0.5;1;1"
-          calcMode="discrete"
+          values="1.010549630679345 1.010549630679345; 1.010549630679345 1.010549630679345; -1.010549630679345 1.010549630679345; -1.010549630679345 1.010549630679345; 1.010549630679345 1.010549630679345"
+          keyTimes="0; 0.49; 0.50; 0.99; 1"
+          calcMode="linear"
           dur="43.79331476974812s"
           repeatCount="indefinite"
           begin="13.053586924981573s"
@@ -455,16 +479,13 @@
           />
           
     <g>
-      <path d="M-9.651-25.643s3.058 2.687 6.095 4.135c3.158 1.508 6.329 1.762 8.329.82 2.551-1.205 3.922 7.353 3.922 7.353 1.088-2.364.634-4.404.3-5.763-.312-1.31-1.18-2.235-2.165-2.666-1.107-.484-2.382-.377-4.092-.024-1.509.308-4.123-.183-6.105-1.554-2.406-1.652-6.284-2.301-6.284-2.301" fill="#fc4b1e" style="stroke-width:1;transform-origin:-112.166px 12.934px"/>
-      <path d="M8.021-14.142s-1.985-4.994-5.072-5.303c-3.218-.323-6.494.448-8.598 1.89-2.689 1.843-3.799-5.159-3.799-5.159-1.219 2.391-.813 4.023-.526 5.098.275 1.04 1.152 1.573 2.156 1.64 1.125.077 2.455-.416 4.243-1.257 1.567-.739 4.252-1.13 6.264-.56 2.427.685 5.332 3.651 5.332 3.651" fill="#fc4b1e" style="stroke-width:1;transform-origin:-112.069px 12.185px"/>
-      <circle cx="15.124" cy="-12.124" r="2.2" fill="#000" style="stroke-width:1"/>
-      <circle cx="15.624" cy="-12.624" r=".9" fill="#fff" style="stroke-width:1"/>
-      <path d="M-13.67-6.659c5.33-8.666 12.67-12 22-10 8.666 2 7.986 10 14.841 10 5.077 0-6.175 8-14.841 10-9.33 2-16.67-1.333-22-10" fill="#b07219" style="stroke-width:1"/>
-      <path d="m-10.79-6.659-10-7 3.27 6.837-3.27 7.163z" fill="#b07219" style="stroke-width:1"/>
-      <path d="M-5.26-12.539q2.355 3.528 0 5.88 2.355 2.352 0 5.88m4.32-13.026q3.18 3.969 0 7.146 3.18 3.177 0 7.146" stroke="#000" stroke-width=".8" opacity=".3" style="stroke-width:.8" fill="#b07219"/>
-      <circle cx="11.968" cy="-11.513" r="2.2" fill="#000" style="stroke-width:1"/>
-      <circle cx="12.468" cy="-12.013" r=".9" fill="#fff" style="stroke-width:1"/>
-      <path d="M7.667 3.389 3.133-.439l-.908 3.545L1.19 6.813z" fill="#b07219" style="stroke-width:1;transform-origin:-107.038px 36.286px"/>
+      <circle cx="17.892" cy="-6.241" r="2" fill="#000" style="stroke-width:1"/>
+      <circle cx="18.392" cy="-6.741" r=".8" fill="#fff" style="stroke-width:1"/>
+      <path d="m-10.628-2.721 14.996-12 20 12-20 12z" fill="#8b8b8b" style="stroke-width:1"/>
+      <path d="m-7.598-2.721-10.879-6.103 2.879 12.103z" fill="#8b8b8b" style="stroke-width:1"/>
+      <circle cx="15.992" cy="-5.969" r="2" fill="#000" style="stroke-width:1"/>
+      <circle cx="16.492" cy="-6.469" r=".8" fill="#fff" style="stroke-width:1"/>
+      <path d="M23.173-2.626 19.658.259 16.3-5.185l4.796 1.847z" fill="#8b8b8b" style="stroke-width:1;transform-origin:19.7365px -2.463px" transform="scale(-1)"/>
     </g>
   
         </g>
@@ -473,14 +494,19 @@
       
       <text
         x="0"
-        y="36"
-        font-size="17"
-        fill="#fff"
-        font-family="monospace"
+        y="28"
+        font-size="11"
+        font-weight="600"
+        fill="#ffffff"
+        font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"
         text-anchor="middle"
-        opacity="0.9"
+        letter-spacing="0.4"
+        paint-order="stroke fill"
+        stroke="rgba(0, 0, 0, 0.55)"
+        stroke-width="2.5"
+        stroke-linejoin="round"
       >
-        Java
+        MDX
       </text>
       
     </g>
@@ -511,9 +537,9 @@
         <animateTransform
           attributeName="transform"
           type="scale"
-          values="-1.1418525712396952 1.1418525712396952; -1.1418525712396952 1.1418525712396952; 1.1418525712396952 1.1418525712396952; 1.1418525712396952 1.1418525712396952; -1.1418525712396952 1.1418525712396952"
-          keyTimes="0;0.5;0.5;1;1"
-          calcMode="discrete"
+          values="-0.934564282353314 0.934564282353314; -0.934564282353314 0.934564282353314; 0.934564282353314 0.934564282353314; 0.934564282353314 0.934564282353314; -0.934564282353314 0.934564282353314"
+          keyTimes="0; 0.49; 0.50; 0.99; 1"
+          calcMode="linear"
           dur="45.626327270583715s"
           repeatCount="indefinite"
           begin="17.098137067529024s"
@@ -530,28 +556,34 @@
           />
           
     <g>
-      <path d="m19.964-9.047 1.49 2.533-7.222 4.693-22.58-2.71v-9.032l22.58-2.71 7.232 5.307z" fill="#555555" style="stroke-width:1;transform-box:fill-box;transform-origin:50% 50%" transform="scale(-1)"/>
-      <path d="m38.73-9.047-19.692-8.451V-.596z" fill="#555555" style="stroke-width:1;transform-origin:24.474px -9.047px"/>
-      <circle cx="-4.069" cy="-10.853" r="2.146" fill="#000" style="stroke-width:1" transform="scale(-1 1)"/>
-      <circle cx="-3.618" cy="-11.305" r=".723" fill="#fff" style="stroke-width:1" transform="scale(-1 1)"/>
-      <path d="m-17.44-8.069 6.264 11.644 6.863-.835 4.118-.5-10.492-6.05-.189-8.01" fill="#555555" opacity=".8" style="stroke-width:1;paint-order:fill;stroke-miterlimit:12.2;stroke-linejoin:bevel;transform-origin:-8.818px -4.123px" transform="rotate(-90)"/>
-      <path d="m-16.942-11.014 5.48-10.188 6.864.834 4.118.501-10.492 6.048-.189 8.012" fill="#555555" opacity=".8" style="stroke-width:1;paint-order:fill;stroke-miterlimit:12.2;stroke-linejoin:bevel;transform-origin:-8.711px -13.505px" transform="rotate(90)"/>
+      <circle cx="8.18" cy="-15.633" r="2.988" fill="#000" style="stroke-width:1"/>
+      <circle cx="8.927" cy="-16.381" r="1.195" fill="#fff" style="stroke-width:1"/>
+      <path d="m15.656-10.437-26.291-19.718-5.189 5.295L1.053-10.437-16.172 3.986l5.537 5.295z" fill="#e34c26"/>
+      <path d="m5.913-10.521-7.88-5.909-7.72 5.909 7.72 5.91z" style="stroke-width:1" fill="#e34c26"/>
+      <circle cx="5.769" cy="-14.841" r="2.988" fill="#000" style="stroke-width:1"/>
+      <path d="m-6.807-10.547-7.88-5.909-7.72 5.909 7.72 5.909z" style="stroke-width:1" fill="#e34c26"/>
+      <circle cx="6.516" cy="-15.589" r="1.195" fill="#fff" style="stroke-width:1"/>
     </g>
-    
+  
         </g>
       </g>
 
       
       <text
         x="0"
-        y="36"
-        font-size="17"
-        fill="#fff"
-        font-family="monospace"
+        y="27"
+        font-size="11"
+        font-weight="600"
+        fill="#ffffff"
+        font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"
         text-anchor="middle"
-        opacity="0.9"
+        letter-spacing="0.4"
+        paint-order="stroke fill"
+        stroke="rgba(0, 0, 0, 0.55)"
+        stroke-width="2.5"
+        stroke-linejoin="round"
       >
-        C
+        HTML
       </text>
       
     </g>
@@ -582,9 +614,9 @@
         <animateTransform
           attributeName="transform"
           type="scale"
-          values="0.9678380237854974 0.9678380237854974; 0.9678380237854974 0.9678380237854974; -0.9678380237854974 0.9678380237854974; -0.9678380237854974 0.9678380237854974; 0.9678380237854974 0.9678380237854974"
-          keyTimes="0;0.5;0.5;1;1"
-          calcMode="discrete"
+          values="0.9133201698484273 0.9133201698484273; 0.9133201698484273 0.9133201698484273; -0.9133201698484273 0.9133201698484273; -0.9133201698484273 0.9133201698484273; 0.9133201698484273 0.9133201698484273"
+          keyTimes="0; 0.49; 0.50; 0.99; 1"
+          calcMode="linear"
           dur="43.69816680518852s"
           repeatCount="indefinite"
           begin="20.940179530443856s"
@@ -601,17 +633,12 @@
           />
           
     <g>
-      <path d="m-10.72-11.416-8-5v10z" fill="#000" opacity=".8" style="stroke-width:1"/>
-      <ellipse cx="2.66" cy="-11.416" rx="16" ry="14" fill="#f1e05a" style="stroke-width:1"/>
-      <path stroke="#f1e05a" stroke-width="2" stroke-linecap="round" style="stroke-width:2" d="M2.66-25.416v-7m10 11 5-5m-5 25 5 5m-14.995-1-.01 7M-8.007-1.026l-4 5m4.055-25.891-4-5"/>
-      <circle cx="12.66" cy="-14.416" r="2.5" fill="#000" style="stroke-width:1"/>
-      <circle cx="13.16" cy="-14.916" r="1" fill="#fff" style="stroke-width:1"/>
-      <path d="m3.876-1.249-4.202-3.72-.761 5.562z" fill="#000" opacity=".8" style="stroke-width:1;transform-origin:1.585px -1.719px"/>
-      <path style="fill:none;stroke:#000;stroke-width:1" d="M14.648-17.455c-3.146-1.45-5.246-.45-5.821 3.144"/>
-      <path stroke="#f1e05a" stroke-width="2" stroke-linecap="round" style="stroke-width:2;transform-origin:8.58px -22.373px" d="m7.347-21.906 2.466-6.627"/>
-      <path stroke="#f1e05a" stroke-width="2" stroke-linecap="round" style="stroke-width:2;transform-origin:8.486px 5.278px" d="M9.719 5.745 7.253-.882"/>
-      <path stroke="#f1e05a" stroke-width="2" stroke-linecap="round" style="stroke-width:2;transform-origin:-2.93px -22.351px" d="m-1.697-21.884-2.466-6.627"/>
-      <path stroke="#f1e05a" stroke-width="2" stroke-linecap="round" style="stroke-width:2;transform-origin:-3.229px 5.241px" d="m-4.462 5.708 2.466-6.627"/>
+      <ellipse cx="9.532" cy="-3.129" rx="20" ry="7" fill="#4F5D95" style="stroke-width:1"/>
+      <path d="m-9.758-4.283-8.71-2.846v8l8.832-2.596z" fill="#4F5D95" opacity=".9" style="stroke-width:1"/>
+      <circle cx="21.532" cy="-5.129" r="2" fill="#000" style="stroke-width:1"/>
+      <circle cx="22.032" cy="-5.629" r=".8" fill="#fff" style="stroke-width:1"/>
+      <path d="M28.335-4.988c1.209-.625 3.633 6.687 1.4 7.862-1.066 1.735-10.266 4.655-9.293 4.445-2.341-.251-3.506-3.323-1.165-3.072.92.832 4.817-.86 6.467-2.757s.578-4.15-.251-4.169z" fill="#4F5D95"/>
+      <ellipse cx="22.469" cy="-16.696" rx="6.276" ry="7" style="stroke-width:1;transform-box:fill-box;transform-origin:50% 50%;fill:#495587" transform="rotate(90 -10.077 .438)"/>
     </g>
   
         </g>
@@ -620,14 +647,19 @@
       
       <text
         x="0"
-        y="36"
-        font-size="17"
-        fill="#fff"
-        font-family="monospace"
+        y="27"
+        font-size="11"
+        font-weight="600"
+        fill="#ffffff"
+        font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"
         text-anchor="middle"
-        opacity="0.9"
+        letter-spacing="0.4"
+        paint-order="stroke fill"
+        stroke="rgba(0, 0, 0, 0.55)"
+        stroke-width="2.5"
+        stroke-linejoin="round"
       >
-        JavaScript
+        PHP
       </text>
       
     </g>
@@ -658,9 +690,9 @@
         <animateTransform
           attributeName="transform"
           type="scale"
-          values="-0.8931575096937822 0.8931575096937822; -0.8931575096937822 0.8931575096937822; 0.8931575096937822 0.8931575096937822; 0.8931575096937822 0.8931575096937822; -0.8931575096937822 0.8931575096937822"
-          keyTimes="0;0.5;0.5;1;1"
-          calcMode="discrete"
+          values="-0.893245248550804 0.893245248550804; -0.893245248550804 0.893245248550804; 0.893245248550804 0.893245248550804; 0.893245248550804 0.893245248550804; -0.893245248550804 0.893245248550804"
+          keyTimes="0; 0.49; 0.50; 0.99; 1"
+          calcMode="linear"
           dur="51.80998086623731s"
           repeatCount="indefinite"
           begin="21.816526127393445s"
@@ -692,14 +724,19 @@
       
       <text
         x="0"
-        y="36"
-        font-size="17"
-        fill="#fff"
-        font-family="monospace"
+        y="26"
+        font-size="11"
+        font-weight="600"
+        fill="#ffffff"
+        font-family="system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif"
         text-anchor="middle"
-        opacity="0.9"
+        letter-spacing="0.4"
+        paint-order="stroke fill"
+        stroke="rgba(0, 0, 0, 0.55)"
+        stroke-width="2.5"
+        stroke-linejoin="round"
       >
-        Objective-C
+        Astro
       </text>
       
     </g>
