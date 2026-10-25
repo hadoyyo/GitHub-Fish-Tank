@@ -208,4 +208,4 @@ Other languages will use one of the following models:
 ![Screenshot](./img/ss/ss2.png)
 
 ### Mobile Device
-<img src="./img/ss/ss3.jpg" width="49%"/> <img src="./img/ss/ss4.jpg" width="49%"/>
+<img src="./img/ss/ss3.png" width="49%"/> <img src="./img/ss/ss4.png" width="49%"/>
