@@ -32,6 +32,7 @@ GitHub Fish Tank is a web application that transforms your GitHub language stati
 - 🐠 38 Custom-designed fish models for specific programming languages
 - 📊 Fish size is proportional to the percentage share of each language
 - 🎨 Customizable aquarium appearance and decorations
+- 🪸 Flat-style decorations sitting in layered sand that adapts to any water and sand color
 - 🏷️ Optional legend and labels displayed on each fish
 - 🔗 README-Ready URL generation
 - 🚫 Language filtering – hide specific languages from the visualization
@@ -117,7 +118,7 @@ Customize every detail of your fish tank - from the background to decorations - 
 | `show_anubias` | Shows anubias plant. Cannot be displayed together with `show_chest`. | boolean | `false` |
 | `show_shell` | Shows shell decoration. Cannot be displayed together with `show_statue`. | boolean | `true` |
 | `show_statue` | Shows a statue decoration. Cannot be displayed together with `show_shell`. | boolean | `false` |
-| `show_frame` | Toggles the visibility of the tank's frame. | boolean | `true` |
+| `show_frame` | Toggles the visibility of the tank's frame. | boolean | `false` |
 | `hide` | Comma-separated list of programming languages to hide from the tank (URL-encoded). Example: `hide=php%2Cc` hides PHP and C. | string (comma-separated) | *none* |
 
 > [!TIP]  
@@ -130,15 +131,23 @@ Customize every detail of your fish tank - from the background to decorations - 
 ### Examples
 
 #### Standard Tank
+Default decorations: castle, treasure chest, clam, rocks and green plants.
+
 <img src="./img/examples/tank1.svg" width="500"/>
 
 #### Moon Tank with yellow frame
+Black water, pale sand and rocks only.
+
 <img src="./img/examples/tank2.svg" width="500"/>
 
 #### Blackwater River
+Every alternative decoration: red plants, anubias on driftwood and a statue.
+
 <img src="./img/examples/tank3.svg" width="500"/>
 
 #### Deep Sea Tank
+A sunken ship instead of the castle.
+
 <img src="./img/examples/tank4.svg" width="500"/>
 
 ## Fish List
